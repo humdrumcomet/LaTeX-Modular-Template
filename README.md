@@ -1,9 +1,4 @@
-# LaTeX in Different Environments Workshop
-
-Welcome to the Latex-in-Different-Environments Workshop.
-This workshop will cover modularizing you documents, the latex compilation process, and using LaTeX in different environments than Overleaf.
-
-As in the previous workshop, all the code used to prepare the document and the presentation are available in this github repo.
+# Modular LaTeX Document Template
 
 ## Workshop Series Map
 
@@ -23,17 +18,17 @@ As in the previous workshop, all the code used to prepare the document and the p
       A quick taste of where else you could take some of these ideas
     - [Course Specific Material](https://github.com/humdrumcomet/LaTeXAdvancedWorkshop-Course-Specific)  
       Some useful course specific material for ELEC
-3. [Modularity and LaTeX in Different Environments](https://github.com/humdrumcomet/LaTeXinDifferentEnvironments) <sup>(you are here)</sup>  
+    - [Empty Template](https://github.com/humdrumcomet/LaTeX-Modular-Template/)<sup>(you are here)</sup>  
+      A template for a modular LaTeX document
+    - [Template with Example Code (compiles)](https://github.com/humdrumcomet/LaTeX-Modular-Template/tree/withExamples)  
+      Example usage of the modular LaTeX template document
+3. [LaTeX in Different Environments](https://github.com/humdrumcomet/LaTeXinDifferentEnvironments)
 4. [Full Reproducibility and Experimental LaTeX Tools]()  
 
 ## Overview and Usage
-This tutorial document is designed to be used in Overleaf, but will work with any current version of TeXlive (Linux or Mac), MacTeX (Mac), or MikTeX (Windows). 
-If you are compiling this document outside of Overleaf, please note that the minted package has an external dependency of [Pygments](https://pygments.org/), but Pygments is multiplatform and will work with Windows, Mac, or Linux.
-
-This document demonstrates basic usage of a couple of LaTeX's importing packages.
-1. [import](https://www.ctan.org/pkg/import)
-2. [standalone](https://www.ctan.org/pkg/standalone)
-3. [catchfilebetweentags](https://www.ctan.org/pkg/catchfilebetweentags)
+This repository provides a template for you to create your modular LaTeX documents, or configure your own template for future use. 
+If you would like to use this with Overleaf, you can download it by clicking on the green "Code" button above and downloading the .zip file.
+If you would like to see this template being used with example code, you can go to the [withExamples](https://github.com/humdrumcomet/LaTeX-Modular-Template/tree/withExamples) branch of this repository by clicking the link, and downloading the .zip from there, and then adding it to your Overleaf projects.
 
 ## Workshop Series Contributors
 
