@@ -1,60 +1,11 @@
 %%% Tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%<*dataTable>
-    \begin{table}[H]
-        \centering
-        \label{tab:parameters}
-        \caption{Table of specified parameters and achieved values}
-        \vspace{0.1cm}
-        \csvreader[
-            head to column names,
-            tabular = {lS[table-format=-1.2e1]S[table-format=-1.2e1]},
-            table head = \toprule {\bfseries Parameter} & {\bfseries Target} & {\bfseries Calculated} \\\midrule,
-            table foot = \bottomrule,
-        ]{\assetPath/Data/data.csv}{}{\csvcoli & \csvcolii & \csvcoliii}
-    \end{table}
-%</dataTable>
+%<* >
+
+%</ >
 
 %%% Code Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%<*demoCode>
-    \begin{listing}[H]
-        \begin{centering}
-            \inputminted{python}{\assetPath/Code/demo.py}
-            \caption{An example of a block of python included and highlighted with the package minted}
-            \label{lst:pythonExample}
-        \end{centering}
-    \end{listing}
-%</demoCode>
 
 %%% Tikz Figures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%<*tikzplot>
-    % \begin{figure}[H]
-    %     \begin{centering}
-    %         \includestandalone[mode=tex, width=0.75\textwidth]{\assetPath/Images/Tikz/plot/plot}
-    %         \caption{A plot produced with TikZ/PGF}
-    %         \label{fig:tikzPlot}
-    %     \end{centering}
-    % \end{figure}
-%</tikzplot>
-
-%<*tikzrectangle>
-    \begin{figure}[H]
-        \begin{centering}
-            \includestandalone[mode=tex, width=0.75\textwidth]{\assetPath/Images/Tikz/rectangle/rectangle}
-            \caption{A Rectangle Drawn in TikZ}
-            \label{fig:tikzRect}
-        \end{centering}
-    \end{figure}
-%</tikzrectangle>
-
-%<*mosfettikz>
-    \begin{figure}[H]
-        \begin{centering}
-            \includestandalone[mode=tex, width=\textwidth]{\assetPath/Images/Tikz/mosfet/mosfet}
-            \caption{A simple TikZ diagram showing a MOSFET}
-            \label{fig:tikzFET}
-        \end{centering}
-    \end{figure}
-%</mosfettikz>
