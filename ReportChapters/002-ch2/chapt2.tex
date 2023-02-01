@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% TOP-BASED PATH DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\toplevel}{../..}
+\providecommand{\sharedPath}{\toplevel/Shared}
+\providecommand{\importPath}{\sharedPath/Imports}
+\providecommand{\bibPath}{\sharedPath/bibFiles}
+\providecommand{\assetPath}{\toplevel/Assets}
+
+\documentclass[hidelinks]{article}
+
+\input{\importPath/preamble}
+\input{\importPath/glossary}
+\input{\importPath/symbols}
+
+\begin{document}
+    \section{Using Plots}
+        \ExecuteMetaData[\importPath/assets.tex]{tikzPlot}
+    \section{Using Tables}
+        \ExecuteMetaData[\importPath/assets.tex]{dataTable}
+    \section{Using Code Blocks}
+        \ExecuteMetaData[\importPath/assets.tex]{demoCode}
+
+    \standaloneBib
+\end{document}

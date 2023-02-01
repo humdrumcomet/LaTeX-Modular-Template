@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% TOP-BASED PATH DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\toplevel}{..}
+\providecommand{\sharedPath}{\toplevel/Shared}
+\providecommand{\importPath}{\sharedPath/Imports}
+\providecommand{\bibPath}{\sharedPath/bibFiles}
+\providecommand{\assetPath}{\toplevel/Assets}
+
+% report and presentation template prepared by Aaron English (humdrumcomet on github)
+\documentclass{beamer}
+
+\usetheme[progressbar=frametitle, numbering=fraction]{metropolis}
+
+\input{\importPath/preamble}
+\input{\importPath/glossary}
+\input{\importPath/symbols}
+
+\title{Title Presentation}
+\subtitle{Subtitle}
+\author{Author}
+\date{\today}
+
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+    \begin{frame}[noframenumbering, plain]
+        \frametitle{Contents}
+        \tableofcontents
+    \end{frame}
+    \begin{frame}
+        \frametitle{Reusing The Plot}
+        \ExecuteMetaData[\importPath/assets.tex]{tikzPlot}
+    \end{frame}
+    \begin{frame}
+        \frametitle{Reusing An Equation}
+        \ExecuteMetaData[\importPath/equations.tex]{lorenzAttr}
+    \end{frame}
+    \begin{frame}[fragile]
+        \frametitle{Reusing A Code Block}
+        \ExecuteMetaData[\importPath/assets.tex]{demoCode}
+    \end{frame}
+    \begin{frame}[allowframebreaks]
+        \frametitle{Bibliography}
+        \printbibliography
+    \end{frame}
+    \begin{frame}[allowframebreaks]
+        \frametitle{Acronyms}
+        \printglossary[type=\acronymtype]
+    \end{frame}
+    \begin{frame}[allowframebreaks]
+        \frametitle{Glossary}
+        \printglossary[type=main]
+    \end{frame}
+    \begin{frame}[allowframebreaks]
+        \frametitle{Constants}
+        \printglossary[type=constants, nonumberlist, nopostdot]
+    \end{frame}
+    \begin{frame}[allowframebreaks]
+        \frametitle{Symbols}
+        \printglossary[type=symbols]
+    \end{frame}
+\end{document}
