@@ -1,3 +1,9 @@
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+% arara: makeglossaries
+% arara: biber
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% TOP-BASED PATH DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,8 +28,8 @@
             % xmin=,
             % xmax=,
             xlabel=\gls{xvar},
-            ylabel=\gls{yvar},]
-            \addplot[color=blue, style=thick]table[x=xVar, y=yVar1, col sep=comma]{\assetPath/Data/data.csv};
+            ylabel=\gls{yvar}]
+            \addplot[color=blue, style=thick] table[x=xVar, y=yVar1, col sep=comma]{\assetPath/Data/data.csv};
         \end{axis}
     \end{tikzpicture}
 \end{document}

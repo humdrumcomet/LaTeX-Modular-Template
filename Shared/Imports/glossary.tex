@@ -1,8 +1,50 @@
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Acronym Only
+\newglossaryentry{cnc}
+{
+    type=\acronymtype,
+    name={CNC},
+    description={Computer Numerically Controlled},
+    first={\glsentrydesc{cnc} (\glsentrytext{cnc})}
+}
 
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Glossary Only
+\newglossaryentry{cpp}
+{%
+    name={C++},
+    description={C++ is a programming language that can be used as an object oriented programming language, an imperative programming language, and still provide low-level memory control. Note: All C++ code used in this work is compiled under the C++11 standard}
+}
 
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Glossary and Acronym
+% Self referencing glossary entry to minimize what needs to be edited between changes
+\newglossaryentry{cwvmg}
+{
+    name={\glsentrytext{cwvm}},
+    description={\glsentrydesc{cwvm} (\glsentrytext{cwvm}) is a voltage multiplier that can be cascaded to give an output voltage of \(nV_{p-p}\) with \(n\) being the number of stages}
+}
+\newglossaryentry{cwvm}
+{
+    type=\acronymtype,
+    name={CWVM},
+    description={Cockroft-Walton voltage multiplier},
+    first={\glsentrydesc{cwvm} (\glsentrytext{cwvm})\glsadd{cwvmg}},
+    plural={\glsentrytext{cwvm}s},
+    descriptionplural={\glsentrydesc{cwvm}s},
+    firstplural={\glsentrydescplural{cwvm} (\glsentryplural{cwvm})},
+    see=[Glossary:]{cwvmg}
+}
+\newglossaryentry{uhvg}
+{%
+    name={\glsentrytext{uhv}},
+    description={\glsentrydesc{uhv} (\glsentrytext{uhv})  is a term which refers to vacuum pressures greater than \SI{1e-8}{\torr}\cite{Bello_2017}}
+}
+\newglossaryentry{uhv}
+{%
+    type=\acronymtype,
+    name={UHV},
+    description={Ultra High Vacuum},
+    first={\glsentrydesc{uhv} (\glsentrytext{uhv})\glsadd{uhvg}},
+    see=[Glossary:]{uhvg}
+}

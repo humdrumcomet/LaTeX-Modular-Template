@@ -1,3 +1,9 @@
+% arara: lualatex: { shell: true, interaction: nonstopmode }
+% arara: makeglossaries
+% arara: biber
+% arara: lualatex: { shell: true, interaction: nonstopmode }
+% arara: lualatex: { shell: true, interaction: nonstopmode }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% TOP-BASED PATH DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,11 +37,15 @@
     \end{frame}
     \begin{frame}
         \frametitle{Reusing The Plot}
-        \ExecuteMetaData[\importPath/assets.tex]{tikzPlot}
+        \ExecuteMetaData[\importPath/assets.tex]{tikzplot}
     \end{frame}
     \begin{frame}
         \frametitle{Reusing An Equation}
         \ExecuteMetaData[\importPath/equations.tex]{lorenzAttr}
+    \end{frame}
+    \begin{frame}
+        \frametitle{Reusing The MOSFET Figure}
+        \ExecuteMetaData[\importPath/assets.tex]{mosfettikz}
     \end{frame}
     \begin{frame}[fragile]
         \frametitle{Reusing A Code Block}

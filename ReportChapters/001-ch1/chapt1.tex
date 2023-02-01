@@ -1,3 +1,9 @@
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+% arara: makeglossaries
+% arara: biber
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+% arara: pdflatex: { shell: true, interaction: nonstopmode }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% TOP-BASED PATH DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,9 +21,16 @@
 
 \begin{document}{}
     \section{Using Equations}
+        Demonstrating the acronym capabilities, I first talk about \gls{uhv} and then the second time I talk about \gls{uhv} it is the short form!
+        Another acronym could be \gls{cnc}, which shortens nicely to just \gls{cnc}.
+        We can also talk about the speed of light \gls{c}, or the variables used in the Equations \ref{eqt:lorenz1}-\ref{eqt:lorenz3}, \gls{lr}, \gls{ls}, \gls{lb}.
         \ExecuteMetaData[\importPath/equations.tex]{lorenzAttr}
+        For good measure we'll be sure to cite \cite{Bello_2017}, and \cite{Knuth_2022}.
     \section{Using Figures}
+        A simple tikz rectangle
         \ExecuteMetaData[\importPath/assets.tex]{tikzrectangle}
+        Or something more interesting like \ref{fig:tikzFET}? Notice the use of the symbols for \gls{mg}, \gls{ms}, \gls{md}.
+        \ExecuteMetaData[\importPath/assets.tex]{mosfettikz}
 
     \standaloneBib
 \end{document}
